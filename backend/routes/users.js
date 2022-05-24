@@ -17,14 +17,14 @@ router.route('/add').post(async (req, res) => {
     const username = req.body.name;
     const mail = req.body.email;
     const phone = req.body.phone;
-    const numOfBuddies = req.body.numOfBuddies;
-    const lovePeople = req.body.lovePeople;
     const language = req.body.language;
     const gender = req.body.gender;
     const place = req.body.place;
+    const numOfBuddies = req.body.numOfBuddies;
+    const lovePeople = req.body.lovePeople;
+    const time = req.body.time;
     const FoodRestrictions = req.body.FoodRestrictions;
     const PetFriendly = req.body.PetFriendly;
-    const time = req.body.time;
     const subject = req.body.subject;
     const DiverseSubject = req.body.DiverseSubject;
 

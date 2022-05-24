@@ -65,6 +65,7 @@ export default function GeneralForm() {
 			})
 			.then(function (response) {
 				console.log(response);
+                localStorage.setItem("user_id", JSON.stringify(response))
 			});
 
 		setIsSubmitted(true);
@@ -94,14 +95,14 @@ export default function GeneralForm() {
 						className="text-indigo-500"
 						onClick={(e) => setIsSubmitted(false)}
 					>
-						Back to Form
+						Create a new form
 					</button>
 					<a
-						href="https://react-hook-form.com/get-started"
+						href="/matches"
 						className="text-gray border-2 border-solid border-gray-600 px-6 py-1 rounded mt-3"
-						target="_blank"
+						
 					>
-						Visit React Hook Form
+						View matches
 					</a>
 				</div>
 			</div>
@@ -156,7 +157,7 @@ export default function GeneralForm() {
 					placeholder="Language"
 					{...register("Language", { required: true })}
 				/> */}
-				<select {...register("Language")} className={inputStyle}>
+				<select {...register("language")} className={inputStyle}>
 					{/* Language */}
 					<option value="Language" disabled selected>
 						Language
@@ -181,14 +182,14 @@ export default function GeneralForm() {
 					placeholder="Would you prefer to meet physically or have an online session?"
 					{...register("physicallyOrOnline", { required: true })}
 				/> */}
-				<select {...register("physicallyOrOnline")} className={inputStyle}>
-					<option value="physicallyOrOnline" disabled selected>
+				<select {...register("place")} className={inputStyle}>
+					<option value="place" disabled selected>
 						Would you prefer to meet physically or have an online session?
 					</option>
 					<option value="physically">Physically</option>
 					<option value="online">Online session</option>
 				</select>
-				<ErrorMsg inputName="physicallyOrOnline" />
+				<ErrorMsg inputName="place" />
 
 				{/* <input
 					className={inputStyle}
@@ -199,33 +200,80 @@ export default function GeneralForm() {
 					<option value="numOfBuddies" disabled selected>
 						How many people would you like to study with?
 					</option>
-					<option value="0buddy">I prefer to study alone</option>
-					<option value="1buddy">1</option>
-					<option value="2buddy">2</option>
-					<option value="3buddy">3</option>
-					<option value="4buddy">4</option>
-					<option value="5buddy">5</option>
+					<option value="0">I prefer to study alone</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
 				</select>
 				<ErrorMsg inputName="numOfBuddies" />
 
-				<select {...register("quietOrCrowded")} className={inputStyle}>
+                 {/* quietOrCrowded */}
+				<select {...register("lovePeople")} className={inputStyle}>
 					<option value="quietOrCrowded" disabled selected>
 						Would you like to study in a quiet place or a crowded one?
 					</option>
 					<option value="Quiet">Physically</option>
 					<option value="Crowded">Online session</option>
 				</select>
-				<ErrorMsg inputName="quietOrCrowded" />
+				<ErrorMsg inputName="lovePeople" />
 
-				<select {...register("studyHours")} className={inputStyle}>
-					<option value="quietOrCrowded" disabled selected>
+				<select {...register("time")} className={inputStyle}>
+					<option value="time" disabled selected>
 						What are your preferred study hours?
 					</option>
 					<option value="Morning">Morning</option>
 					<option value="Noon">Noon</option>
 					<option value="Evening">Evening</option>
 				</select>
-				<ErrorMsg inputName="studyHours" />
+				<ErrorMsg inputName="time" />
+
+                <select {...register("FoodRestrictions")} className={inputStyle}>
+					<option value="FoodRestrictions" disabled selected>
+                        Food Restrictions
+					</option>
+					<option value="Kosher">Kosher</option>
+					<option value="Vegan">Vegan</option>
+					<option value="Halal">Halal</option>
+                    <option value="Gluten free">Gluten free</option>
+				</select>
+				<ErrorMsg inputName="FoodRestrictions" />
+
+                <select {...register("PetFriendly")} className={inputStyle}>
+					<option value="PetFriendly" disabled selected>
+                        Pets Friendly? 
+					</option>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+					<option value="Don't mind">Don't mind</option>
+				</select>
+				<ErrorMsg inputName="PetFriendly" />
+
+                <select {...register("subject")} className={inputStyle}>
+					<option value="subject" disabled selected>
+						What are you studying?
+					</option>
+					<option value="Exact Sciences">Exact Sciences</option>
+					<option value="Engineering">Engineering</option>
+					<option value="Social Sciences">Social Sciences</option>
+                    <option value="Humanities">Humanities</option>
+					<option value="Arts">Arts</option>
+					<option value="Medicine">Medicine</option>
+				</select>
+				<ErrorMsg inputName="subject" />
+
+                <select {...register("DiverseSubject")} className={inputStyle}>
+					<option value="DiverseSubject" disabled selected>
+						With whom would you like to study?
+					</option>
+					<option value="">Same subjet</option>
+					<option value="No">Different subject</option>
+					<option value="Don't mind">Don't mind</option>
+				</select>
+				<ErrorMsg inputName="DiverseSubject" />
+
+
 
 				<input
 					type="submit"

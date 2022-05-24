@@ -1,11 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import GeneralForm from './components/GeneralForm';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-        <GeneralForm/>
+    <BrowserRouter>
+        <Routes>
+            <Router></Router>
+        </Routes>
+    </BrowserRouter>
+        // <GeneralForm/>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
