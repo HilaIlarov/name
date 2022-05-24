@@ -1,3 +1,10 @@
+import "./Matches.css"
+
 export default function Matches(){
-return "hilaaa"
+return (
+<div className="matches">
+    <text className="title">It's a match!</text>
+</div>
+
+)
 }
