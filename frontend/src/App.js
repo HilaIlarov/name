@@ -13,6 +13,7 @@ function App() {
         <Routes>
             <Route path="/matches" element={<Matches/>}/>
             <Route path="/" element={<OpeningScreen/>} />
+            <Route path="/GeneralForm" element={<GeneralForm/>}/>
         </Routes>
     </BrowserRouter>
          {/* <GeneralForm/> */}
