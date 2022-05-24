@@ -1,0 +1,24 @@
+.matches {
+	position: relative;
+}
+
+.title {
+	font-family: "Pacifico", cursive;
+	position: absolute;
+	width: 228px;
+	height: 38px;
+	left: 76px;
+	top: 75px;
+
+	/* font-family: "Roboto"; */
+	font-style: normal;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 38px;
+    text-align: center;
+	/* identical to box height, or 90% */
+
+	color: #8352b4;
+
+	border: 1px solid #ffffff;
+}
