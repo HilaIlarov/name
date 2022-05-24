@@ -113,9 +113,9 @@ export default function GeneralForm() {
 	return (
 		<div className="w-full md:w-1/2 xl:w-1/3 container mx-auto pt-4 md:pb-1  rounded-md">
 			<form className={formStyle} onSubmit={handleSubmit(onSubmit)}>
-				<h1 class="title text-4xl text-center">Foodie</h1>
+				<h1 class="title text-4xl text-center mx-10">StudyMatch</h1>
 				<h3 className="text-sm text-center px-4 my-3">
-					Add your restaurant to our list
+					New Friends, New places
 				</h3>
 
 				{/* <input 
