@@ -2,16 +2,19 @@ import logo from './logo.svg';
 import './App.css';
 import GeneralForm from './components/GeneralForm';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Matches from './components/Matches';
+
 
 function App() {
   return (
     <div className="App">
     <BrowserRouter>
         <Routes>
-            <Router></Router>
+            <Route path="/matches" element={<Matches/>}/>
+            <Route path="/" element={<GeneralForm/>} />
         </Routes>
     </BrowserRouter>
-        // <GeneralForm/>
+         {/* <GeneralForm/> */}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
