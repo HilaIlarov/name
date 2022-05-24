@@ -4,7 +4,7 @@
 
 .title {
 	font-family: "Pacifico", cursive;
-	position: absolute;
+	/* position: absolute; */
 	width: 228px;
 	height: 38px;
 	left: 76px;
@@ -14,11 +14,41 @@
 	font-style: normal;
 	font-weight: 500;
 	font-size: 40px;
-	line-height: 38px;
+	/* line-height: 38px; */
     text-align: center;
 	/* identical to box height, or 90% */
 
 	color: #8352b4;
 
-	border: 1px solid #ffffff;
+	/* border: 1px solid #ffffff; */
+}
+
+.text {
+	font-family: "Pacifico", cursive;
+	/* position: absolute; */
+	width: 228px;
+	/* height: 38px; */
+	left: 76px;
+	/* top: 75px; */
+
+	/* font-family: "Roboto"; */
+	font-style: normal;
+	font-weight: 200;
+	font-size: 20px;
+	line-height: 100px;
+    text-align: center;
+	/* identical to box height, or 90% */
+
+	color: #8352b4;
+
+	/* border: 1px solid #ffffff; */
+}
+
+.screen{
+    margin-top: 100;
+    left: 50;
+    width: 228px;
+    
+    align-content: center;
+    align-items: center;
 }

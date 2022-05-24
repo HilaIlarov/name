@@ -67,7 +67,7 @@ export default function GeneralForm() {
 			})
 			.then(function (response) {
 				console.log(response);
-                localStorage.setItem("user_id", JSON.stringify(response))
+                localStorage.setItem("user_id", JSON.stringify(response.data))
 			});
 
 		setIsSubmitted(true);
