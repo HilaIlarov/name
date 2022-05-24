@@ -3,6 +3,7 @@ import './App.css';
 import GeneralForm from './components/GeneralForm';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Matches from './components/Matches';
+import OpeningScreen from './components/OpeningScreen';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
     <BrowserRouter>
         <Routes>
             <Route path="/matches" element={<Matches/>}/>
-            <Route path="/" element={<GeneralForm/>} />
+            <Route path="/" element={<OpeningScreen/>} />
         </Routes>
     </BrowserRouter>
          {/* <GeneralForm/> */}

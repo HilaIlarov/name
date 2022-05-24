@@ -1,0 +1,7 @@
+.OpeningScreen {
+    position: relative;
+    width: 375px;
+    height: 812px;
+
+    background: rgba(131, 82, 180, 0.06);
+}
