@@ -67,7 +67,7 @@ export default function GeneralForm() {
 			})
 			.then(function (response) {
 				console.log(response);
-                localStorage.setItem("user_id", JSON.stringify(response.data))
+				localStorage.setItem("user_id", JSON.stringify(response.data));
 			});
 
 		setIsSubmitted(true);
@@ -102,7 +102,6 @@ export default function GeneralForm() {
 					<a
 						href="/matches"
 						className="text-gray border-2 border-solid border-gray-600 px-6 py-1 rounded mt-3"
-						
 					>
 						View matches
 					</a>
@@ -211,7 +210,7 @@ export default function GeneralForm() {
 				</select>
 				<ErrorMsg inputName="numOfBuddies" />
 
-                 {/* quietOrCrowded */}
+				{/* quietOrCrowded */}
 				<select {...register("lovePeople")} className={inputStyle}>
 					<option value="quietOrCrowded" disabled selected>
 						Would you like to study in a quiet place or a crowded one?
@@ -231,20 +230,20 @@ export default function GeneralForm() {
 				</select>
 				<ErrorMsg inputName="time" />
 
-                <select {...register("FoodRestrictions")} className={inputStyle}>
+				<select {...register("FoodRestrictions")} className={inputStyle}>
 					<option value="FoodRestrictions" disabled selected>
-                        Food Restrictions
+						Food Restrictions
 					</option>
 					<option value="Kosher">Kosher</option>
 					<option value="Vegan">Vegan</option>
 					<option value="Halal">Halal</option>
-                    <option value="Gluten free">Gluten free</option>
+					<option value="Gluten free">Gluten free</option>
 				</select>
 				<ErrorMsg inputName="FoodRestrictions" />
 
-                <select {...register("PetFriendly")} className={inputStyle}>
+				<select {...register("PetFriendly")} className={inputStyle}>
 					<option value="PetFriendly" disabled selected>
-                        Pets Friendly? 
+						Pets Friendly?
 					</option>
 					<option value="Yes">Yes</option>
 					<option value="No">No</option>
@@ -252,20 +251,20 @@ export default function GeneralForm() {
 				</select>
 				<ErrorMsg inputName="PetFriendly" />
 
-                <select {...register("subject")} className={inputStyle}>
+				<select {...register("subject")} className={inputStyle}>
 					<option value="subject" disabled selected>
 						What are you studying?
 					</option>
 					<option value="Exact Sciences">Exact Sciences</option>
 					<option value="Engineering">Engineering</option>
 					<option value="Social Sciences">Social Sciences</option>
-                    <option value="Humanities">Humanities</option>
+					<option value="Humanities">Humanities</option>
 					<option value="Arts">Arts</option>
 					<option value="Medicine">Medicine</option>
 				</select>
 				<ErrorMsg inputName="subject" />
 
-                <select {...register("DiverseSubject")} className={inputStyle}>
+				<select {...register("DiverseSubject")} className={inputStyle}>
 					<option value="DiverseSubject" disabled selected>
 						With whom would you like to study?
 					</option>
@@ -275,9 +274,8 @@ export default function GeneralForm() {
 				</select>
 				<ErrorMsg inputName="DiverseSubject" />
 
-
-
 				<input
+					value="Submit"
 					type="submit"
 					className="w-full text-md px-5 py-2 my-4 bg-purple-500 text-white rounded-full hover:bg-purple-600 focus:outline-none"
 				/>
