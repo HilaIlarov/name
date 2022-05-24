@@ -28,9 +28,9 @@ export default function Matches() {
 				<TailSpin
 					height="300"
 					width="100"
-                    // left="300"
-                    display= "flex"
-                    align-self="center"
+					// left="300"
+					display="flex"
+					align-self="center"
 					color="purple"
 					ariaLabel="loading"
 				/>
@@ -46,12 +46,14 @@ export default function Matches() {
 const Match = ({ match }) => {
 	return (
 		<div className="screen">
-            <div>
-			    <label className="title">It's a match!</label>
-            </div>
-            <div>
-                <label className="text">You were matched with {match["username"]}</label>
-            </div>
+			<div>
+				<label className="title">It's a match!</label>
+			</div>
+			<div>
+				<label className="text1">
+					You were matched with {match["username"]}
+				</label>
+			</div>
 		</div>
 	);
 };

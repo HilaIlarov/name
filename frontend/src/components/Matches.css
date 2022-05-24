@@ -1,5 +1,8 @@
 .matches {
 	position: relative;
+    display: flex;
+    padding-top: 100px;
+    justify-content: center;
 }
 
 .title {
@@ -23,7 +26,7 @@
 	/* border: 1px solid #ffffff; */
 }
 
-.text {
+.text1 {
 	font-family: "Pacifico", cursive;
 	/* position: absolute; */
 	width: 228px;
