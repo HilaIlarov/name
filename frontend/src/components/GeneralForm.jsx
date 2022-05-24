@@ -38,11 +38,39 @@ export default function GeneralForm() {
 		return value !== "admin";
 	};
 
+	const data = {
+		language: "Hebrew",
+		email: "jjj",
+		gender: "female",
+		name: "hil",
+		numOfBuddies: "0",
+		phone: "222222222222",
+		place: "physically",
+		lovePeople: "Quiet",
+		time: "Morning",
+		FoodRestrictions: "kosher",
+		PetFriendly: "yes",
+		subject: "CS",
+		DiverseSubject: "yes",
+	};
+
+	const axios = require("axios");
+
 	const onSubmit = (data) => {
+		console.log(data);
+
+		axios
+			.post("http://localhost:8888/users/add", {
+				...data,
+			})
+			.then(function (response) {
+				console.log(response);
+			});
+
 		setIsSubmitted(true);
 		reset();
 	};
-
+	// onSubmit(data);
 	if (isSubmitted)
 		return (
 			<div className="w-full md:w-1/2 xl:w-1/3 container mx-auto pt-4 md:pb-1 rounded-md">

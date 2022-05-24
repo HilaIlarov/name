@@ -13,7 +13,7 @@ router.route('/match').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/add').post((req, res) => {
+router.route('/add').post(async (req, res) => {
     const username = req.body.name;
     const mail = req.body.email;
     const phone = req.body.phone;
@@ -27,6 +27,7 @@ router.route('/add').post((req, res) => {
     const time = req.body.time;
     const subject = req.body.subject;
     const DiverseSubject = req.body.DiverseSubject;
+
     const newUser = new User({
         username,
         mail,
@@ -42,9 +43,9 @@ router.route('/add').post((req, res) => {
         subject,
         DiverseSubject
     });
-
-    newUser.save()
-        .then(() => res.json(newUser._id))
+    
+    await newUser.save();
+    res.status(200).json(newUser._id)
 });
 
 module.exports = router;

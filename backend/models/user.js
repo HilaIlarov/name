@@ -20,7 +20,7 @@ const UserSchema = new Schema({
         required: true
     },
     lovePeople: {
-        type: Boolean,
+        type: String,
         required: true
     },
     language:{
@@ -49,11 +49,11 @@ const UserSchema = new Schema({
     },
     subject:{
         type: String,
-        required: true
+        required: false
     },
     DiverseSubject:{
         type: String,
-        required: true
+        required: false
     }
 });
 
