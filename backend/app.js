@@ -5,7 +5,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-const port = 5000;
+const port = 8888;
 
 app.use(cors());
 app.use(express.json());
@@ -28,7 +28,7 @@ mongoose.connect(
 const users = require("./models/user");
 
 const usersRouter = require("./routes/users");
-;
+
 app.use("/users", usersRouter);
 
 // Firing up the app on selected port
@@ -44,3 +44,8 @@ app.get("/", function (req, res) {
 app.on("error", (error) => {
   throw new Error(`[app]::ERROR:${error.message}`);
 });
+
+// const karina = new users({username:"Karina", mail:"karina246@gmail.com", phone:"0536236855",
+//     numOfBuddies:2, lovePeople:true, language:"Hebrew", gender:"Female",  place:"Tel Aviv", FoodRestrictions:"Vegan",
+//     PetFriendly:false, time:"Morning", subject:"Computer Science", DiverseSubject:true})
+// karina.save();
