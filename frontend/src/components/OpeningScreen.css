@@ -1,0 +1,46 @@
+.OpeningScreen {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    width: 328px;
+    height: 288px;
+    left: 28px;
+    top: 100px;
+}
+
+.text {
+    /* position: absolute; */
+    /* width: 135px;
+    height: 38px;
+    left: 125px;
+    top: 444px;
+    z-index: 10; */
+margin-top: 8px;
+    font-family: 'arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    line-height: 38px;
+    /* identical to box height, or 146% */
+
+
+    color: #FDFDFD;
+
+}
+.contbutton {
+    position: absolute;
+    width: 223px;
+    height: 60px;
+    left: 76px;
+    top: 433px;
+    
+    background: #8352B4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 22px;
+}
