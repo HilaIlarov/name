@@ -62,7 +62,7 @@ export default function GeneralForm() {
 		console.log(data);
 
 		axios
-			.post("http://localhost:8888/users/add", {
+			.post("./http://localhost:8888/users/add", {
 				...data,
 			})
 			.then(function (response) {
@@ -79,7 +79,7 @@ export default function GeneralForm() {
 			<div className="w-full md:w-1/2 xl:w-1/3 container mx-auto pt-4 md:pb-1 rounded-md">
 				<div className={`${formStyle} items-center`}>
 					<svg
-						xmlns="http://www.w3.org/2000/svg"
+						xmlns="./http://www.w3.org/2000/svg"
 						className="h-20 w-20"
 						fill="none"
 						viewBox="0 0 24 24"
