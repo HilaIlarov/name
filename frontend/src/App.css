@@ -12,12 +12,7 @@ html, body {
 body {
   font-family: 'Roboto',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
   color: #444;
-<<<<<<< HEAD
   background-color: rgba(131, 82, 180, 0.06);;
-=======
-  /* background-color: #663b7d; */
-  background-color: rgba(131, 82, 180, 0.06);
->>>>>>> master
   /* background-image: linear-gradient(110deg, #663b7d 0%, #92aacf 100%); */
 }
 
