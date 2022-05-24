@@ -7,10 +7,17 @@ router.route('/').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/match').get((req, res) => {
-    User.find({username: "karina"})
-        .then(users => res.json(users))
-        .catch(err => res.status(400).json('Error: ' + err));
+router.route('/match').get(async (req, res) => {
+    const {ObjectId} = require('mongodb')
+    const userId = req.query.userId;
+    try {
+        const user = (await User.find({_id: ObjectId(userId)}))[0]
+        const matchData = await match(user)
+        res.status(200).json(matchData)
+    }
+    catch (err){
+        res.status(400).json('Error: ' + err)
+    }
 });
 
 router.route('/add').post(async (req, res) => {
@@ -47,5 +54,27 @@ router.route('/add').post(async (req, res) => {
     await newUser.save();
     res.status(200).json(newUser._id)
 });
+
+async function match(cur_user) {
+    const users = await User.find()
+    if (cur_user["numOfBuddies"] === 0){
+        return null
+    }
+    else{
+        for (let i=0; i < users.length; i++){
+            if(!(cur_user["_id"].equals(users[i]["_id"])) && users[i]["place"] === cur_user["place"] && users[i]["lovePeople"] === cur_user["lovePeople"]){
+                if(cur_user["DiverseSubject"] === "true"){
+                    if(users[i]["subject"] === cur_user["subject"] ){
+                        return users[i]
+                    }
+                }
+                else {
+                    return users[i]
+                }
+            }
+        }
+    }
+    return null
+}
 
 module.exports = router;

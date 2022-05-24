@@ -45,7 +45,7 @@ app.on("error", (error) => {
   throw new Error(`[app]::ERROR:${error.message}`);
 });
 
-// const karina = new users({username:"Karina", mail:"karina246@gmail.com", phone:"0536236855",
+// const karina = new users({username:"Dana", mail:"dana@gmail.com", phone:"0567847688",
 //     numOfBuddies:2, lovePeople:true, language:"Hebrew", gender:"Female",  place:"Tel Aviv", FoodRestrictions:"Vegan",
 //     PetFriendly:false, time:"Morning", subject:"Computer Science", DiverseSubject:true})
 // karina.save();
